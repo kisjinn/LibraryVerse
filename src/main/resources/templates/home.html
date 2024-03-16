@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home Page</title>
+    <style>
+        .mask {
+            height: 600px;
+            width: 100vw;
+            background: black;
+            overflow: hidden;
+            background: #C33764;
+            background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/38szWHt");
+            background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/38szWHt"); /* The least supported option. */
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+</head>
+
+<body>
+<header>
+    <div th:insert="fragments/header :: header"></div>
+
+    <div class="mask rgba-black-strong">
+        <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-md-10">
+                    <h2 class="display-4 font-weight-bold text-white pt-5 mb-2">Learning never stops</h2>
+                    <hr class="hr-light">
+                    <h4 class="text-white my-4">Served more than half a million customers till date, with average rating of 4.9+</h4>
+                    <button type="button" class="btn btn-outline-white text-white">Read more <i
+                            class="fa fa-book ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<main class="mt-5">
+    <div class="container">
+        <section id="best-features" class="text-center">
+            <h2 class="mb-5 font-weight-bold">Best Features</h2>
+            <div class="row d-flex justify-content-center mb-4">
+                <div class="col-md-8">
+                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi voluptate
+                        hic
+                        provident nulla repellat
+                        facere esse molestiae ipsa labore porro minima quam quaerat rem, natus repudiandae debitis
+                        est
+                        sit pariatur.</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-5">
+                    <i class="fa fa-camera-retro fa-4x orange-text"></i>
+                    <h4 class="my-4 font-weight-bold">Experience</h4>
+                    <p class="grey-text">Experienced staff with years of experience</p>
+                </div>
+                <div class="col-md-4 mb-1">
+                    <i class="fa fa-heart fa-4x orange-text"></i>
+                    <h4 class="my-4 font-weight-bold">Quality</h4>
+                    <p class="grey-text">High quality books to serve your purpose</p>
+                </div>
+                <div class="col-md-4 mb-1">
+                    <i class="fa fa-bicycle fa-4x orange-text"></i>
+                    <h4 class="my-4 font-weight-bold">Seamless</h4>
+                    <p class="grey-text">Seamless and hassle free process to help you with ease</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</main>
+</body>
+</html>
+

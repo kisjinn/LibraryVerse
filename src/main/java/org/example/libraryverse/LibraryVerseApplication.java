@@ -22,8 +22,8 @@ public class LibraryVerseApplication {
     public CommandLineRunner initialCreate(BookService bookService){
         //adding dummy data
         return (args)->{
-            Book book1 = new Book("ABC", "Book name ", "My book");
-            Author author1 = new Author("Test name1", "Test description");
+            Book book1 = new Book("XYZ", "Book name ", "My book");
+            Author author1 = new Author("Sakshi Jinnewar", "Test description");
             Category category1 = new Category("Business books");
             Publisher publisher1 = new Publisher("First Publisher");
             book1.adAuthor(author1);
@@ -32,7 +32,7 @@ public class LibraryVerseApplication {
             bookService.adddBook(book1);
 
             Book book2 = new Book("ABC1", "Book name 1", "My first book");
-            Author author2 = new Author("Test name2", "Test description one");
+            Author author2 = new Author("Snehal Jinnewar", "Test description one");
             Category category2 = new Category("Science books");
             Publisher publisher2 = new Publisher("Second Publisher");
             book2.adAuthor(author2);
@@ -41,7 +41,7 @@ public class LibraryVerseApplication {
             bookService.adddBook(book2);
 
             Book book3 = new Book("ABC21", "Book name 2", "My second book");
-            Author author3 = new Author("Test name3", "Test description two");
+            Author author3 = new Author("Anoo K", "Test description two");
             Category category3 = new Category("Fiction books");
             Publisher publisher3 = new Publisher("Third Publisher");
             book3.adAuthor(author3);

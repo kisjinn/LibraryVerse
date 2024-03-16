@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dark/Light Theme Toggle</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom styles for dark theme -->
+    <link rel="stylesheet" th:href="@{/css/dark-theme.css}" id="dark-theme">
+
+    <!-- Custom styles for light theme -->
+    <link rel="stylesheet" th:href="@{/css/light-theme.css}" id="light-theme" th:remove="all">
+
+    <style>
+        /* Additional custom styles can be added here */
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Dark/Light Theme Toggle Button -->
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="themeToggle">
+        <label class="custom-control-label" for="themeToggle">Toggle Dark/Light Theme</label>
+    </div>
+    <!-- Your content goes here -->
+    <h1 th:text="${message}">Hello, World!</h1>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Dark/Light Theme Toggle Script -->
+<script>
+    $(document).ready(function(){
+        $('#themeToggle').change(function(){
+            if($(this).prop('checked')){
+                $('#dark-theme').removeAttr('th:remove');
+                $('#light-theme').attr('th:remove', 'all');
+            } else {
+                $('#light-theme').removeAttr('th:remove');
+                $('#dark-theme').attr('th:remove', 'all');
+            }
+        });
+    });
+</script>
+</body>
+</html>
