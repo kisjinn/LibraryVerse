@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Header</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+    <!-- Custom CSS for header -->
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            background-color: #3f51b5;
+            border-bottom: 2px solid #303f9f; /* Add border bottom for depth effect */
+            border-radius: 0; /* Remove border-radius for a more modern look */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+            padding: 15px 0; /* Add padding for better spacing */
+        }
+
+        .navbar-brand {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change font-family for a modern look */
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white !important;
+            transition: all 0.3s ease; /* Add transition for smoother hover effect */
+        }
+
+        .navbar-brand:hover {
+            color: #fbc02d; /* Change text color on hover */
+        }
+
+        .navbar-toggler {
+            border-color: white; /* Change border color of the toggler button */
+        }
+
+        .navbar-toggler-icon {
+            background-color: white; /* Change background color of the toggler icon */
+        }
+
+        .navbar-nav .nav-link {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change font-family for a modern look */
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: white !important;
+            transition: all 0.3s ease; /* Add transition for smoother hover effect */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #fbc02d; /* Change text color on hover */
+        }
+
+        /* Theme Toggler Styling */
+        .dark-mode-toggle {
+            margin-left: 15px; /* Add some margin for spacing */
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #fbc02d; /* Change scrollbar thumb color */
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #f57c00; /* Change scrollbar thumb color on hover */
+        }
+
+        /* End Custom CSS for header */
+    </style>
+</head>
+
+<body>
+<nav th:fragment="header" class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">LibraryVerse</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/books">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/categories">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/publishers">Publishers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/authors">Authors</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Theme Toggler -->
+        <div class="form-check form-switch dark-mode-toggle">
+            <input class="form-check-input" type="checkbox" id="themeToggle">
+        </div>
+        <!-- End Theme Toggler -->
+
+    </div>
+</nav>
+
+<!-- JavaScript for theme toggler -->
+<script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('change', function () {
+        body.classList.toggle('dark-mode');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home Page</title>
+    <style>
+        .mask {
+            height: 600px;
+            width: 100vw;
+            background: black;
+            overflow: hidden;
+            background: #C33764;
+            background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("book_library.png");
+            background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("book_library.png");
+            . */
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+</head>
+
+<body>
+<header>
+    <div th:insert="fragments/header :: header"></div>
+
+    <div class="mask rgba-black-strong">
+        <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-md-10">
+                    <h2 class="display-4 font-weight-bold text-white pt-5 mb-2">Learning never stops</h2>
+                    <hr class="hr-light">
+                    <h4 class="text-white my-4">
+                        We have provided exceptional service to over 500,000 customers to date, maintaining an outstanding average rating of 4.9+.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<main class="mt-5">
+    <div class="container">
+        <section id="best-features" class="text-center">
+            <h2 class="mb-5 font-weight-bold">Key Advantages</h2>
+            <div class="row d-flex justify-content-center mb-4">
+                <div class="col-md-8">
+                    <p class="grey-text">Discover the distinctive benefits of our platform. Explore how our solution seamlessly streamlines operations, providing unparalleled convenience and efficiency. Experience hassle-free management, enabling you to focus on what matters most: your library's success.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-1">
+                    <i class="fa fa-graduation-cap fa-4x orange-text"></i>
+                    <h4 class="my-4 font-weight-bold">Expertise</h4>
+                    <p class="grey-text">Benefit from our knowledgeable staff with years of experience in library management.</p>
+                </div>
+
+                <div class="col-md-4 mb-1">
+                    <i class="fa fa-check-circle fa-4x orange-text"></i>
+                    <h4 class="my-4 font-weight-bold">Reliable Content</h4>
+                    <p class="grey-text">Access a curated collection of reliable and high-quality resources to meet your needs.</p>
+                </div>
+
+                <div class="col-md-4 mb-1">
+                    <i class="fa fa-bookmark fa-4x orange-text"></i>
+                    <h4 class="my-4 font-weight-bold">Efficient Organization</h4>
+                    <p class="grey-text">Effortlessly manage and organize your library resources for seamless access and utilization.</p>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+</main>
+</body>
+</html>
+
